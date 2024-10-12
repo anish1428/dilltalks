@@ -44,7 +44,7 @@ const Post = ({ post }) => {
         try {
             const action = liked ? "dislike" : "like";
             const res = await axios.get(
-                `http://localhost:3000/api/v1/post/${post._id}/${action}`,
+                `https://dilltalks.onrender.com/api/v1/post/${post._id}/${action}`,
                 { withCredentials: true }
             );
             if (res.data.success) {
@@ -62,7 +62,7 @@ const Post = ({ post }) => {
     const deletePostHandler = async () => {
         try {
             const res = await axios.delete(
-                `http://localhost:3000/api/v1/post/delete/${post?._id}`,
+                `https://dilltalks.onrender.com/api/v1/post/delete/${post?._id}`,
                 { withCredentials: true }
             );
             if (res.data.success) {
@@ -79,7 +79,7 @@ const Post = ({ post }) => {
     };
     const commentHandler = async () => {
         try {
-            const res = await axios.post(`http://localhost:3000/api/v1/post/${post?._id}/comment`, { text }, {
+            const res = await axios.post(`https://dilltalks.onrender.com/api/v1/post/${post?._id}/comment`, { text }, {
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -101,7 +101,7 @@ const Post = ({ post }) => {
     }
     const bookMarkHandler = async () => {
         try {
-            const res = await axios.get(`http://localhost:3000/api/v1/post/${post?._id}/bookmark`, { withCredentials: true })
+            const res = await axios.get(`https://dilltalks.onrender.com/api/v1/post/${post?._id}/bookmark`, { withCredentials: true })
             if (res.data.success) {
                 toast.success(res.data.message);
                 { bookmarked ? setBookmarked(!bookmarked) : (setBookmarked(!bookmarked)) }

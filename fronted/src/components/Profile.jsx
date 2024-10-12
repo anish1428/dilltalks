@@ -30,7 +30,7 @@ const Profile = () => {
   }
   const followUnfollowHandler = async () => {
     try {
-      const res = await axios.get(`http://localhost:3000/api/v1/user/followorunfollow/${userId}`, { withCredentials: true })
+      const res = await axios.get(`https://dilltalks.onrender.com/api/v1/user/followorunfollow/${userId}`, { withCredentials: true })
 
 
       if (res.data.success) {
@@ -53,7 +53,7 @@ const Profile = () => {
   const deletePostHandler=async(postId)=>{
     try {
       const res = await axios.delete(
-          `http://localhost:3000/api/v1/post/delete/${postId}`,
+          `https://dilltalks.onrender.com/api/v1/post/delete/${postId}`,
           { withCredentials: true }
       );
       if (res.data.success) {
@@ -71,7 +71,7 @@ const Profile = () => {
   }
   const deleteProfileHandler = async () => {
     try {
-      const res = await axios.delete(`http://localhost:3000/api/v1/user/deleteProfile/${user._id}`, {
+      const res = await axios.delete(`https://dilltalks.onrender.com/api/v1/user/deleteProfile/${user._id}`, {
         withCredentials: true,
       });
       if (res.data.success) {

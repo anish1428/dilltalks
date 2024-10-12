@@ -36,7 +36,7 @@ const CommentDialog = ({ open, setOpen }) => {
       
     const sendMessageHandler = async () => {
         try {
-            const res = await axios.post(`http://localhost:3000/api/v1/post/${selectedPost?._id}/comment`, { text }, {
+            const res = await axios.post(`https://dilltalks.onrender.com/api/v1/post/${selectedPost?._id}/comment`, { text }, {
                 headers: {
                     'Content-Type': 'application/json'
                 },

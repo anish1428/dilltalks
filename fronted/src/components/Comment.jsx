@@ -19,7 +19,7 @@ const Comment = ({ comment }) => {
   const deleteCommentHandler = async () => {
     try {
       if (selectedPost?.author._id === user?._id) {
-        const res = await axios.delete(`http://localhost:3000/api/v1/post/${selectedPost._id}/comment/${selectedComment._id}`, { withCredentials: true });
+        const res = await axios.delete(`https://dilltalks.onrender.com/api/v1/post/${selectedPost._id}/comment/${selectedComment._id}`, { withCredentials: true });
         if (res.data.success) {
           setOpen(false);
           const updatedPosts = posts.map(postItem => {

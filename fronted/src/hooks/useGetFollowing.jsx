@@ -9,7 +9,7 @@ export const useGetFollowing=(user)=>{
     useEffect(()=>{
         const fetchAllFollowing=async()=>{
             try {
-                const res=await axios.get('http://localhost:3000/api/v1/user/following',{withCredentials:true})
+                const res=await axios.get('https://dilltalks.onrender.com/api/v1/user/following',{withCredentials:true})
                 if(res.data.success){
                     dispatch(setFollowingUser(res.data.following));
                 }

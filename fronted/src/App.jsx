@@ -1,5 +1,5 @@
 import Login from "./components/Login"
-import Signup from "./components/signup"
+import Signup from "./components/Signup"
 import Home from "./components/Home"
 import MainLayout from "./components/MainLayout"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"

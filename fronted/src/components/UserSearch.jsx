@@ -14,7 +14,7 @@ const UserSearch = () => {
             if (query.trim()) {
                 try {
                     setLoading(true);
-                    const res = await axios.get(`http://localhost:3000/api/v1/user/users/search`, {
+                    const res = await axios.get(`https://dilltalks.onrender.com/api/v1/user/users/search`, {
                         params: { q: query },
                         headers: {
                             'Content-Type': 'application/json'
