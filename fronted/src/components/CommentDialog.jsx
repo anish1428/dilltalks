@@ -60,12 +60,12 @@ const CommentDialog = ({ open, setOpen }) => {
     return (
         <Dialog open={open}>
             <DialogContent onInteractOutside={() => setOpen(false)} className="max-w-5xl p-0 flex flex-col">
-                <div className='flex-1 flex '>
-                    <div className='w-1/2 h-[500px]'>
+                <div className='flex-col  flex lg:flex-row '>
+                    <div className='w-full h-[400px] lg:w-1/2 lg:h-[500px]'>
                         <img className='rounded-l-lg  w-full h-full object-cover' src={selectedPost?.image} alt="post_img" />
 
                     </div>
-                    <div className='w-1/2 flex flex-col justify-between'>
+                    <div className='w-full flex flex-col justify-between lg:w-1/2'>
                         <div className='flex items-center justify-between p-4'>
                             <div className=' flex gap-3 items-center'>
                                 <Link>

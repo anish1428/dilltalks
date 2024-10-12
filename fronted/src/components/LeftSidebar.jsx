@@ -132,7 +132,7 @@ const LeftSidebar = () => {
   return (
     <div className=" fixed top-0 z-10 left-0   border-r border-gray-300 w-fit h-screen lg:px-4 lg:w-[16%] ">
       <div className="flex flex-col">
-        <h1 className="my-8 pl-3 font-bold text-xl">
+        <h1 className="my-8 text-center font-bold text-xl">
           <h1 className="text-xl hidden font-bold font-poppins text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-red-500 to-black drop-shadow-2xl lg:text-3xl lg:block">
             Dill Talks
           </h1>
@@ -145,7 +145,7 @@ const LeftSidebar = () => {
             return (
               <div
                 onClick={() => sidebarHandler(item.text)}
-                className="flex  items-center gap-3 relative hover:bg-gray-100 cursor-pointer rounded-lg p-3  my-3"
+                className="flex  items-center gap-3 relative hover:bg-gray-100 cursor-pointer rounded-lg py-2 mx-1 my-3"
                 key={index}
               >
                 {item.icon}
